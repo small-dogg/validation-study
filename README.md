@@ -72,3 +72,26 @@ required vs required.item.itemName
  new String{"required.item.itemName,required"}
  
 위의 형태를 스프링에서는 MessageCodesResolver로 구현해둠.
+
+# Bean Validation
+
+## 하비어네이트 Validator 참고 자료
+- [공식 사이트](http://hibernate.org/validator/)
+- [공식 메뉴얼](https://docs.jboss.org/hibernate/validator/6.2/reference/en-US/html_single/)
+- [검증 애노테이션 모음](https://docs.jboss.org/hibernate/validator/6.2/reference/en-US/html_single/#validator-defineconstraints-spec)
+
+## Bean Validation
+
+### 사용 방법
+@Validated 사용 방법
+
+### Bean Validation의 한계
+groups - 실무에서 잘 사용하지 않음
+
+### Form 전송 객체
+요청별로 DTO 만들어서 사용
+
+### HTTP 메시지 컨버터
+동일하게 사용할 수있지만, 타입미스매치를 처리하기 어려움
+요청받은 정보를 객체화해야하지만, 객체화할 수 없어 에러 발생
+-> 예외처리로 해결해야함.
